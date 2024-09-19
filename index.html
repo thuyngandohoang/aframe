@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Mondrian Composition</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-camera position="0 1.2 1.5"></a-camera>
+
+        <!-- Museum floor -->
+        <a-plane position="0 -2 -5" width="50" height="50" rotation="-90 0 0" 
+        material="src: url(Douglas Fir Staggered 88.7 x 118.1 inches texture.jpg); repeat: 5 5;">
+      </a-plane>
+      
+
+      <!-- Museum walls -->
+      <a-box position="0 5 -3" width="30" height="12" depth="0.1" color="#FFFFFF"></a-box> <!-- Back wall -->
+      <a-box position="-15 5 0" width="0.1" height="12" depth="30" color="#FFFFFF"></a-box> <!-- Left wall -->
+      <a-box position="15 5 0" width="0.1" height="12" depth="30" color="#FFFFFF"></a-box> <!-- Right wall -->
+
+      <!-- Light -->
+      <a-light type="spot" color="#FFF" intensity="2" position="0 10 -5" target="#painting" angle="60" distance="20"></a-light>
+      <a-light type="ambient" color="#FFFFFF" intensity="1.0"></a-light>
+
+      <!-- Painting -->
+
+      <a-plane position="0 1.5 -3" width="2.6" height="3.75" color="#FFFFFF"></a-plane>
+      <!-- Rectangles -->
+      <a-box position="-0.455 3.0 -2.99" width="1.69" height="0.75" depth="0.2" color="#b32518">
+      </a-box>>
+        
+      <a-box position="0.84 1.39 -2.99" width="0.865" height="2.38" depth="0.2" color="#d4dbdd"></a-box>
+      <a-box position="0.87 -0.082 -2.98" width="0.886" height="0.568" depth="0.2" color="#0204d7"></a-box>
+      <a-box position="-1.1 -0.2 -2.98" width="0.42" height="0.42" depth="0.25" color="#eed360"></a-box>
+      <!-- Horizontal black line-->
+      <a-box position="0.411 1.5 -2.99" width="0.04" height="3.75" depth="0.7" color="#000"
+      animation="property: position; to: 0.411 1.5 -2.88; dir: alternate; dur: 2500; loop: true; easing: easeInOutSine">
+      </a-box>
+      <a-box position="-0.9 -0.18 -2.99" width="0.04" height="0.44" depth="0.3" color="#000"
+      animation="property: position; to: -0.9 -0.18 -2.88; dir: alternate; dur: 2500; loop: true; easing: easeInOutSine">
+      </a-box>
+      <!-- Vertical black line-->
+
+      <a-box position="0 2.63 -2.99" width="2.6" height="0.04" depth="0.35" color="#000"
+      animation="property: position; to: 0 2.63 -2.88; dir: alternate; dur: 2000; loop: true; easing: easeInOutSine">
+      </a-box>
+      <a-box position="0.85 0.22 -2.99" width="0.892" height="0.04" depth="0.35" color="#000"
+      animation="property: position; to: 0.85 0.22 -2.88; dir: alternate; dur: 2000; loop: true; easing: easeInOutSine">
+      </a-box>
+      <a-box position="-0.46 0.09 -2.99" width="1.7" height="0.04" depth="0.35" color="#000"
+      animation="property: position; to: -0.46 0.09 -2.88; dir: alternate; dur: 2000; loop: true; easing: easeInOutSine">
+      </a-box>
+      
+      
+    </a-scene>
+  </body>
+</html>
+
